@@ -1,0 +1,53 @@
+<product-form (add)="addProduct($event)"></product-form>
+<!-- Card con la lista de productos aquí -->
+
+<div class="card">
+  <div class="card-header bg-primary text-white">Mi lista de productos</div>
+  <div class="card-block">
+    <form class="form p-3">
+      <div class="row">
+        <label class="col-form-label col-sm-2 text-sm-end" for="filterDesc">
+          Filter:
+        </label>
+        <div class="col-sm-5">
+          <input
+            type="text"
+            [(ngModel)]="search"
+            class="form-control"
+            name="filterDesc"
+            id="filterDesc"
+            placeholder="Filter..."
+          />
+        </div>
+        <label class="col-form-label col-sm-5">
+          Filtered by: {{ search }}
+        </label>
+      </div>
+    </form>
+    @if (products.length){
+    <div class="row headers g-0">
+      <div class="col-2">
+        <button
+          class="btn btn-sm"
+          [ngClass]="{
+                    'btn-danger': this.showImage,
+                    'btn-primary': !this.showImage,
+                  }"
+          (click)="toggleImage()"
+        >
+          {{ showImage ? "Hide" : "Show" }} images
+        </button>
+      </div>
+      <div class="col-4 my-auto">{{ headers.description }}</div>
+      <div class="col my-auto">{{ headers.price }}</div>
+      <div class="col my-auto">{{ headers.available }}</div>
+      <!-- Resto de columnas -->
+      <div class="col my-auto">{{ headers.rating }}</div>
+    </div>
+    @for (product of products | productFilter:search; track product.id) {
+    <product-item class="row g-0" [product]="product" [showImage]="showImage" />
+    } }@else{
+    <h3 class="p-4">No hay productos disponibles</h3>
+    }
+  </div>
+</div>

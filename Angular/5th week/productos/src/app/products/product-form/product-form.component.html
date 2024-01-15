@@ -1,0 +1,88 @@
+<div class="card mb-4">
+  <div class="card-header bg-success text-white">Add product</div>
+  <div class="card-body">
+    <form (ngSubmit)="addProduct()" #addForm="ngForm">
+      <div class="mb-3 row">
+        <label class="col-sm-2 col-form-label text-sm-end">Description</label>
+        <div class="col-sm-10">
+          <input
+            type="text"
+            class="form-control"
+            name="description"
+            minlength="5"
+            maxlength="60"
+            required
+            [(ngModel)]="newProduct.description"
+            #descModel="ngModel"
+            [ngClass]="validClasses(descModel, 'is-valid', 'is-invalid')"
+          />
+          @if(descModel.errors?.['required']) {
+          <div class="invalid-feedback">Description cannot be empty</div>
+          } @if(descModel.errors?.['minlength']) {
+          <div class="invalid-feedback">
+            You must enter at least
+            {{descModel.errors?.['minlength'].requiredLength - descModel.errors?.['minlength'].actualLength}}
+            characters more
+          </div>
+          }
+        </div>
+      </div>
+      <div class="mb-3 row">
+        <label class="col-sm-2 col-form-label text-sm-end">Price</label>
+        <div class="col-sm-10">
+          <input
+            type="number"
+            class="form-control"
+            name="price"
+            [(ngModel)]="newProduct.price"
+          />
+        </div>
+      </div>
+      <div class="mb-3 row">
+        <label class="col-sm-2 col-form-label text-sm-end">Available</label>
+        <div class="col-sm-10">
+          <input
+            type="date"
+            class="form-control"
+            name="available"
+            required
+            minDate="2021-09-01"
+            [(ngModel)]="newProduct.available"
+            #availModel="ngModel"
+            [ngClass]="validClasses(availModel, 'is-valid', 'is-invalid')"
+          />
+        </div>
+      </div>
+      <div class="mb-3 row">
+        <label class="col-sm-2 col-form-label text-sm-end"> Image</label>
+        <div class="col-sm-10">
+          <input
+            type="file"
+            class="form-control"
+            accept="image/*"
+            (change)="changeImage($event)"
+            name="fileName"
+            required
+            ngModel
+            #imageModel="ngModel"
+            [ngClass]="{
+              'is-valid': imageModel.touched && imageModel.valid,
+              'is-invalid': imageModel.touched && !imageModel.valid
+            }"
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-10 offset-sm-2">
+          <img class="product-img" [src]="newProduct.imageUrl" />
+        </div>
+      </div>
+
+      <div class="mb-3 row">
+        <div class="offset-sm-2 col-sm-10">
+          <button type="submit" class="btn btn-primary" [disabled]="addForm.invalid">Submit</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
