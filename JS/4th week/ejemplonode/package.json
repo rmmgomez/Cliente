@@ -1,0 +1,22 @@
+{
+  "name": "ejemplonode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "eslint index.js",
+    "saludo": "echo \"Hola, esto es una prueba\"",
+    "start": "lite-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dayjs": "^1.11.10"
+  },
+  "devDependencies": {
+    "eslint": "^8.51.0",
+    "lite-server": "^2.6.1",
+    "uglify-js": "^3.17.4"
+  }
+}
