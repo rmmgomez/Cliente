@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Navigation</ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-searchbar></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="parentSearch"></div>
+  <bm-map [coords]="coords">
+    <bm-marker [coords]="coords" color="blue"></bm-marker>
+    @if (validInputId) {
+      <bm-autosuggest idContainer="parentSearch" idInput="search" (locationChanged)="searchResult($event)"></bm-autosuggest>
+    }
+  </bm-map>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="startNavigation()">
+      <ion-icon name="navigate"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
