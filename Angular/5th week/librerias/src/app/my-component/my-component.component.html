@@ -1,0 +1,12 @@
+<button
+  [swal]="{
+    title: 'Who are you?',
+    input: 'text',
+    icon: 'question',
+    showCancelButton: true
+  }"
+  (confirm)="sayHello($event)"
+  (dismiss)="cancelHello()"
+>
+  Ask name
+</button>
