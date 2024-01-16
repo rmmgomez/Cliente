@@ -11,6 +11,8 @@
     "@angular/platform-browser-dynamic": "^17.0.2",
     "@angular/router": "^17.0.2",
     "@capacitor-community/facebook-login": "^5.0.3",
+    "@capacitor-community/sqlite": "^5.5.1-4",
+    "@capacitor-mlkit/barcode-scanning": "^5.3.0",
     "@capacitor/action-sheet": "^5.0.6",
     "@capacitor/android": "^5.6.0",
     "@capacitor/app": "^5.0.6",
@@ -31,6 +33,7 @@
     "@capacitor/splash-screen": "^5.0.6",
     "@capacitor/status-bar": "5.0.6",
     "@capacitor/toast": "^5.0.6",
+    "@capgo/capacitor-flash": "^2.0.14",
     "@codetrix-studio/capacitor-google-auth": "^3.3.6",
     "@ionic/angular": "^7.5.0",
     "@ionic/pwa-elements": "^3.2.2",
@@ -111,7 +114,7 @@
       },
       {
         "file": "android/app/capacitor.build.gradle",
-        "hash": "10949875080769424135"
+        "hash": "4027133231135155757"
       },
       {
         "file": "android/app/proguard-rules.pro",
@@ -123,7 +126,7 @@
       },
       {
         "file": "android/app/src/main/AndroidManifest.xml",
-        "hash": "10703662000287675416"
+        "hash": "4935238079482628809"
       },
       {
         "file": "android/app/src/main/java/es/fullstackpro/ionic/capacitor/MainActivity.java",
@@ -259,7 +262,7 @@
       },
       {
         "file": "android/app/src/main/res/values/strings.xml",
-        "hash": "4593979490748458307"
+        "hash": "17739166160209685397"
       },
       {
         "file": "android/app/src/main/res/values/styles.xml",
@@ -279,7 +282,7 @@
       },
       {
         "file": "android/capacitor.settings.gradle",
-        "hash": "15229801244631886344"
+        "hash": "14237284650560983508"
       },
       {
         "file": "android/gradle.properties",
@@ -327,11 +330,11 @@
       },
       {
         "file": "package-lock.json",
-        "hash": "16762480249965308749"
+        "hash": "2518795513977376248"
       },
       {
         "file": "package.json",
-        "hash": "16864891144126938949"
+        "hash": "16975911792787593011"
       },
       {
         "file": "src/app/action-sheet/action-sheet.page.html",
@@ -363,7 +366,7 @@
       },
       {
         "file": "src/app/app.component.ts",
-        "hash": "17186482483314855238"
+        "hash": "18296983045946738652"
       },
       {
         "file": "src/app/app.routes.ts",
@@ -387,7 +390,7 @@
       },
       {
         "file": "src/app/barcode-scanner/barcode-scanner.page.html",
-        "hash": "16415756084909370958"
+        "hash": "16963790580034606460"
       },
       {
         "file": "src/app/barcode-scanner/barcode-scanner.page.scss",
@@ -399,7 +402,7 @@
       },
       {
         "file": "src/app/barcode-scanner/barcode-scanner.page.ts",
-        "hash": "7089208313438920176"
+        "hash": "2981710755033996076"
       },
       {
         "file": "src/app/bingmaps/bingmaps.config.ts",
@@ -507,7 +510,7 @@
       },
       {
         "file": "src/app/facebook-login/facebook-login.page.html",
-        "hash": "16722576370889929283"
+        "hash": "8536468994397587235"
       },
       {
         "file": "src/app/facebook-login/facebook-login.page.scss",
@@ -519,7 +522,7 @@
       },
       {
         "file": "src/app/facebook-login/facebook-login.page.ts",
-        "hash": "10047498899954166362"
+        "hash": "18128064927166836020"
       },
       {
         "file": "src/app/filesystem/filesystem.page.html",
@@ -539,7 +542,7 @@
       },
       {
         "file": "src/app/flashlight/flashlight.page.html",
-        "hash": "9032288242810348457"
+        "hash": "14079494748624723645"
       },
       {
         "file": "src/app/flashlight/flashlight.page.scss",
@@ -551,7 +554,7 @@
       },
       {
         "file": "src/app/flashlight/flashlight.page.ts",
-        "hash": "13442891423306392664"
+        "hash": "5498770501027593789"
       },
       {
         "file": "src/app/geolocation/geolocation.page.html",
@@ -683,7 +686,7 @@
       },
       {
         "file": "src/app/sqlite/sqlite.page.html",
-        "hash": "4351284393748751969"
+        "hash": "15765097215557635287"
       },
       {
         "file": "src/app/sqlite/sqlite.page.scss",
@@ -695,7 +698,7 @@
       },
       {
         "file": "src/app/sqlite/sqlite.page.ts",
-        "hash": "7014841847362330920"
+        "hash": "3644070018558195151"
       },
       {
         "file": "src/app/toast/toast.page.html",

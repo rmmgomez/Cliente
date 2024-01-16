@@ -1,20 +1,48 @@
-import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { IonicModule } from '@ionic/angular';
+import { Component, OnDestroy } from '@angular/core';
+import { CapacitorFlash } from '@capgo/capacitor-flash';
+import {
+  IonButton,
+  IonButtons,
+  IonContent,
+  IonHeader,
+  IonIcon,
+  IonInput,
+  IonItem,
+  IonLabel,
+  IonList,
+  IonMenuButton,
+  IonTitle,
+  IonToolbar,
+} from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-flashlight',
   templateUrl: './flashlight.page.html',
   styleUrls: ['./flashlight.page.scss'],
   standalone: true,
-  imports: [IonicModule, CommonModule, FormsModule]
+  imports: [
+    IonButton,
+    IonButtons,
+    IonContent,
+    IonHeader,
+    IonIcon,
+    IonInput,
+    IonItem,
+    IonLabel,
+    IonList,
+    IonMenuButton,
+    IonTitle,
+    IonToolbar,
+  ],
 })
-export class FlashlightPage implements OnInit {
+export class FlashlightPage implements OnDestroy {
+  on = false;
 
-  constructor() { }
-
-  ngOnInit() {
+  async toggleFlash() {
+    this.on = (await CapacitorFlash.toggle()).value;
   }
 
+  ngOnDestroy() {
+    CapacitorFlash.switchOff();
+  }
 }

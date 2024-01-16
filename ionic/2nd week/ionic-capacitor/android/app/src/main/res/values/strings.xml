@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Ionic Capacitor</string>
+    <string name="title_activity_main">Ionic Capacitor</string>
+    <string name="package_name">es.fullstackpro.ionic.capacitor</string>
+    <string name="custom_url_scheme">es.fullstackpro.ionic.capacitor</string>
+  <string name="facebook_app_id">736181371795176</string>
+  <string name="facebook_client_token">385fcc3024e4865173e99c06207b6903</string>
+</resources>
+

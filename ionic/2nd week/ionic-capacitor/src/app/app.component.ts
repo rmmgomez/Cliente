@@ -43,7 +43,9 @@ import {
   logoFacebook,
   logoGoogle,
   flashlight,
-  grid
+  grid,
+  barcode,
+  trash,
 } from 'ionicons/icons';
 
 @Component({
@@ -76,6 +78,7 @@ export class AppComponent {
   public appPages = [
     { title: 'Action Sheet', url: '/action-sheet', icon: 'chevron-up' },
     { title: 'App', url: '/app', icon: 'apps' },
+    { title: 'Barcode Scanner', url: '/barcode-scanner', icon: 'barcode' },
     { title: 'Camera', url: '/camera', icon: 'camera' },
     { title: 'Clipboard', url: '/clipboard', icon: 'clipboard' },
     { title: 'Device Info', url: '/device', icon: 'phone-portrait' },
@@ -123,7 +126,9 @@ export class AppComponent {
       logoFacebook,
       logoGoogle,
       flashlight,
-      grid
+      grid,
+      barcode,
+      trash,
     });
 
     this.initializeApp();
