@@ -47,10 +47,10 @@ export class BarcodeScannerPage implements OnInit {
 
   async ngOnInit() {
     const resp = await BarcodeScanner.isGoogleBarcodeScannerModuleAvailable();
-    if(!resp.available) {
+    if (!resp.available) {
       await BarcodeScanner.installGoogleBarcodeScannerModule();
-      this.installed = true;
     }
+    this.installed = true;
   }
 
   async scan() {
